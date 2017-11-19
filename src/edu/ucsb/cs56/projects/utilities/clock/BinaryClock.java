@@ -194,6 +194,7 @@ public class BinaryClock extends JFrame implements Runnable
 
 
 
+
     //This is to set the color of the background
     void setBackgroundColor() {
 	
@@ -492,7 +493,11 @@ public class BinaryClock extends JFrame implements Runnable
         {
             ex.printStackTrace();
         }
-        update();
+
+        //Keep the clock running forever until the user closes the application
+        while(true){
+        	update();
+        }
     }
 
     /**
@@ -562,7 +567,6 @@ public class BinaryClock extends JFrame implements Runnable
 	    {
 		ex.printStackTrace();
 	    }
-        update();
     }
 
     /**
